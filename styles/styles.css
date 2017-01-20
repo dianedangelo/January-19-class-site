@@ -1,0 +1,129 @@
+.block1{
+	width:200px;
+	height:200px;
+	background-color: purple;
+	transform:skewX(10deg) rotateX(30deg) translate(100px);
+/*	1s is how long width trans takes; 4s is how long bkgd takes; 1s is the delay before bkgd trans will play*/
+	transition: 1s width, 4s background 1s;
+}
+
+.block1:hover{
+	width:400px;
+	background:red;
+}
+
+.block2{
+	width:100px;
+	height:100px;
+	background-color: red;
+	
+/*	1s is how long width trans takes; 4s is how long bkgd takes; 1s is the delay before bkgd trans will play*/
+	transition: 1s width, 1s height, 1s border-radius 1s, 4s background 1s;
+}
+
+.block2:hover{
+	width:200px;
+	height:200px;
+	border-radius:100px;
+	background:blue;
+}
+
+.block3{
+	width:200px;
+	height:200px;
+	background:orange;
+	/*transition:1s width, 1s height, 3s transform 1s;*/
+}
+
+.block3:hover{
+	animation:animate 3s infinite;
+	width:200px;
+	height:200px;
+	background:orange;
+	transform: rotateX(60deg) rotateY(30deg) rotateZ(25deg);
+}
+
+.block4{
+	width:80px;
+	height:80px;
+	margin:3px;
+	background:yellow;
+	float:left;
+	opacity:.3;
+	transition: 1s opacity, 1s border-radius, 1s background;
+}
+
+.block4:hover{
+	opacity:1;
+	background:purple;
+	border-radius:100px;
+}
+
+
+@keyframes animate{
+    0% {transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg); 
+    	background:orange;
+    }
+
+    /*20%{background:green;}*/
+
+    33%{transform:rotateX(-60deg) rotateY(-30deg) rotateZ(-25deg);
+    	background:yellow;
+    }
+
+    66%{transform:rotateX(60deg) rotateY(30deg) rotateZ(25deg);
+    	background:red;
+    }
+
+    /*80%{background:blue;}*/
+
+    100% {transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg); background:orange;
+    }
+}
+
+
+
+
+
+
+
+h2{
+	font-family: helvetica, sans-serif;
+	font-weight: bold;
+	font-size:40pt;
+}
+
+.scale{
+	width:100px;
+	transform-origin: 0 0 0;
+	transition: 1s;
+}
+
+.scale:hover{
+	transform:scale(1.75);
+}
+
+.translate{
+	width:100px;
+	transform:translate(400px);
+}
+
+.rotate{
+	width:100px;
+	transform:rotate(32deg) translate(200px);
+}
+
+.skew{
+	width:100px;
+	transform:skewX(30deg);
+}
+
+.rotateX{
+	width:100px;
+	transform:rotateX(60deg);
+}
+
+.rotateY{
+	width:100px;
+	transform:rotateY(60deg);
+}
